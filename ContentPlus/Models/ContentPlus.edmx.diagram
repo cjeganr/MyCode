@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="fc0fc668350647fc90959847cdf86756" Name="Diagram1" ZoomLevel="72">
+        <EntityTypeShape EntityType="ContentPlusModel.NewsAdmin" Width="1.5" PointX="0.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="ContentPlusModel.Article" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.Priest" Width="1.5" PointX="5.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.Church" Width="1.5" PointX="0.75" PointY="5.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.ChurchMember" Width="1.5" PointX="7.75" PointY="0.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.Curia" Width="1.5" PointX="7.75" PointY="3.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.CuriaMember" Width="1.5" PointX="0.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.DailyMessage" Width="1.5" PointX="2.75" PointY="8.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.Eparchy" Width="1.5" PointX="5.375" PointY="8.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.InstitutionMember" Width="1.5" PointX="7.375" PointY="8.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.Institution" Width="1.5" PointX="9.375" PointY="8.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.Province" Width="1.5" PointX="10.375" PointY="0.75" />
+        <EntityTypeShape EntityType="ContentPlusModel.Parish" Width="1.5" PointX="10.375" PointY="3.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

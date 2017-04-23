@@ -1,0 +1,739 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="~/Content/Website/images/favicon.ico">
+    <title>The Syro-Malankara Catholic Church</title>
+    <link href="~/Content/Website/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Website/css/style.css" rel="stylesheet">
+    <link href="~/Content/Website/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/Website/bxslider/jquery.bxslider.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,900' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-xxs"><a href="#" class="logo2"><img src="~/Content/Website/images/logo-2.png" width="333" height="83" alt="Catholicate" class="img-responsive"></a></div>
+                <div class="col-xs-8 col-xxs inner_banner">
+                    <div>
+                        Before a word is on my tongue you know it completely, O LORD. <br>
+                        <strong>Psalm 139:4 </strong>
+                    </div>
+                    @using (Html.BeginForm("Index", "PriestSearch", FormMethod.Get))
+                        {
+                        <div class="searchbar clearfix">
+                            <div class="input-group">
+                                <input type="text" name="name" placeholder="Search for..." class="form-control" required>
+                                <span class="input-group-btn">
+                                    <input type="submit" name="submit" value="Go!" class="btn btn-primary">
+                                </span>
+                            </div>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+        <div class="main-header">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-12">
+                        <ul class="flexy-menu">
+                            <li class="active"><a href="@Url.Action("Index", "Home")">Home</a></li>
+                            <li> <a href="#">Church</a>
+                            <ul>
+                                <li> <a href="@Url.Action("Index", "Publisher")">Glimpses of History</a>
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action("LateHeads", "Publisher")">Late Heads</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("LateBishops", "Publisher")">Late Bishops</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("LatePrelates", "Publisher")">Late Prelates</a>
+                                    </li>
+                                </ul>
+                                </li>
+                                <li>
+                                    <a href="@Url.Action("MajorArchiepiscopalChurch", "Publisher")">MJR.Archiepiscopal Church</a>
+                                </li>
+                            </ul>
+                            </li>
+                            <li><a href="@Url.Action("Hirerachy", "Publisher")">Hirerachy</a>
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action("Pope", "Publisher")">Pope Francis</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("MajorArchBishop", "Publisher")">Major Archbishops</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("SynodFathers", "Publisher")">Holy Synod Father</a>
+                                    </li>
+                                    <li>
+                                        <a href="#">Holy Episcopal Synod</a>
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("OrdinarySynod", "Publisher")">Ordinary Synod</a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="@Url.Action("FirstOrdinarySynod", "Publisher")">First Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SecondOrdinarySynod", "Publisher")">Second Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("ThirdOrdinarySynod", "Publisher")">Third Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("FourthOrdinarySynod", "Publisher")">Fourth Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("FifthOrdinarySynod", "Publisher")">Fifth Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SixthOrdinarySynod", "Publisher")">Sixth Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SeventhOrdinarySynod", "Publisher")">Seventh Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("EighthOrdinarySynod", "Publisher")">Eighth Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("NinthOrdinarySynod", "Publisher")">Ninth Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("TenthOrdinarySynod", "Publisher")">Tenth Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("EleventhOrdinarySynod", "Publisher")">Eleventh Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("TwelthOrdinarySynod", "Publisher")">Twelth Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("ThirteenthOrdinarySynod", "Publisher")">Thirteenth Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("FourteenOrdinarySynod", "Publisher")">Fourteen Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("FifteenOrdinarySynod", "Publisher")">Fifteen Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SixteenOrdinarySynod", "Publisher")">Sixteen Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SeventeenOrdinarySynod", "Publisher")">Seventeen Ordinary Synod</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("EighteenOrdinarySynod", "Publisher")">Eighteen Ordinary Synod</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("ExtraOrdinarySynod", "Publisher")">Extraordinary Synod</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Curia", "Publisher")">Curia</a>
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action("PermanentSynod", "Publisher")">Permanent Synod</a>
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("PermanentSynodMembers", "Publisher")">Members</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("PermanentSynodReports", "Publisher")">Report</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Offices", "Publisher")">Offices</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("SynodalCommissions", "Publisher")">Synodal Commision</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">More Links</a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommReport", "Publisher")">Report</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommLiturgy", "Publisher")">Liturgy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommBibleApostolate", "Publisher")">Bible Apostolate</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommEvangelization", "Publisher")">Evangelization</a>
+                                                    </li>
+                                                    @*<li>
+                <a href="@Url.Action("SynodCommFaithfuloutsideIndia", "Publisher")">Faithful outside India</a>
+            </li>*@
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommTheologyandPublications", "Publisher")">Theology</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommPublications", "Publisher")">Publications</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommEcumenismandDialogue", "Publisher")">Ecumenism and Dialogue</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommClergy", "Publisher")">Clergy</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommReligious", "Publisher")">Religious</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommLaity", "Publisher")">Laity</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="#">More Links</a>
+                                                <ul>
+
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommYouth", "Publisher")">Youth</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommFamily", "Publisher")">Family</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommCatechism", "Publisher")">Catechism</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommVocation", "Publisher")">Vocation</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommSeminaryFormation", "Publisher")">Seminary Formation</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommEducation", "Publisher")">Education</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommSocialApostolateandDalitChristians", "Publisher")">Social Apostolate and Dalit Christians</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommHealthService", "Publisher")">Health Service</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SynodCommCommunications", "Publisher")">Communication Media</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Tribunals", "Publisher")">Tribunal</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Canonisation", "Publisher")">Canonisation</a>
+                                    </li>
+                                    
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Provinces", "Publisher")">Provinces</a>
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action("TrivandrumProvince", "Publisher")">Trivandrum</a>
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("TrivandrumEparchy", "Publisher")">Trivandrum</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("MarthandamEparchy", "Publisher")">Marthandam</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("MavelikaraEparchy", "Publisher")">Mavelikara</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("PathanamthittaEparchy", "Publisher")">Pathanamthitta</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("TiruvallaProvince", "Publisher")">Thiruvilla</a>
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("TiruvallaEparchy", "Publisher")">Tiruvalla</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("BatheryEparchy", "Publisher")">Bathery</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("MuvattupuzhaEparchy", "Publisher")">Muvattupuzha</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("PutturEparchy", "Publisher")">Puttur</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("ExtraterritorialRegions", "Publisher")">Extraterritorial Regions</a>
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("GurgaonDelhi", "Publisher")">Eparchy of Gurgaon-Delhi</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("ExarchateInUSA", "Publisher")">Eparchy of USA and Canada</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("ExarchateofKhadkiPune", "Publisher")">Exarchate of Khadki-Pune</a>
+                                            </li>
+                                        </ul>
+</li>                               
+                                    <li>
+                                        <a href="#">Other Pastoral Regions</a>
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("ItalyEparchy", "Publisher")">Region in Italy</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("GermanyEparchy", "Publisher")">Region in Germany & Switzerland</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("UKEparchy", "Publisher")">Region in United Kingdom</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("CanadaEparchy", "Publisher")">Region in Ireland</a>
+                                            </li>                                          
+                                            
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("MiddleEastEparchy", "Publisher")">Extra Territorial Regions in Middle East</a>
+                                    </li>
+</ul>
+                            </li>
+                            <li>
+                                <a href="#">Religious</a>
+                                <ul>
+                                    <li>
+                                        <a href="#">For Men</a>
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("OrderOfTheImitationOfChrist", "Publisher")">Order of the Imitation of Christ</a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="@Url.Action("NavajeevanProvince", "Publisher")">Navajeevan Province</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("NavajyothyProvince", "Publisher")">Navajyothy Province</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("KurisumalaAshram", "Publisher")">Order  of Cistercians of the Strict Observance (Kurisumala Ashram)</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("OrderoftheFriarsMinorCapuchin", "Publisher")">Order of the Minor Capuchin (OFM)</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("SalesiansofDonBosco", "Publisher")">Salesians of Don Bosco (SDB)</a>
+                                            </li>
+                                            @*<li>
+                        <a href="@Url.Action("KristiyaSanyasaSamajam", "Publisher")">Kristiya Sanyasa Samajam</a>
+                    </li>*@
+                                            <li>
+                                                <a href="@Url.Action("FranciscanMissionaryBrothers", "Publisher")">Franciscan Missionary Brothers (CMSF)</a>
+                                            </li>
+                                            
+                                            @*<li>
+                        <a href="@Url.Action("DisciplesofDivineSavior", "Publisher")">Disciples of Divine Savior</a>
+                    </li>*@
+                                            <li>
+                                                <a href="@Url.Action("DhyanaAshram", "Publisher")">Dhyana Ashram</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("ChayalpadiAshram", "Publisher")">Chayalpadi Ashram</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("SanthiAshram", "Publisher")">Santhi Ashram</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("OrderofCisterciansoftheStrict", "Publisher")">The Order of the Discalced Carmelities (OCD)</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">For Women</a>
+                                        <ul>
+                                            <li>
+                                                <a href="#">More Links</a>
+                                                <ul>
+                                                    <li>
+                                                        <a href="@Url.Action("SIC", "Publisher")">Sisters of the Imitation of Christ (SIC)</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="@Url.Action("SICTrivandrum", "Publisher")">Trivandrum</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="@Url.Action("SICTiruvalla", "Publisher")">Tiruvalla</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="@Url.Action("SICBathery", "Publisher")">Bathery</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="@Url.Action("SICPathanamthitta", "Publisher")">Pathanamthitta</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="@Url.Action("SICMuvattupuzha", "Publisher")">Muvatthupuzha</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("DM", "Publisher")">Daughters of Mary (DM)</a>
+                                                        <ul>
+                                                            <li>
+                                                                <a href="@Url.Action("DMMarthandam", "Publisher")">Marthandam</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="@Url.Action("DMTrivandrum", "Publisher")">Trivandrum</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="@Url.Action("DMVenniyoor", "Publisher")">Venniyoor</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="@Url.Action("DMPunjab", "Publisher")">Punjab</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="@Url.Action("DMBathery", "Publisher")">Bathery</a>
+                                                            </li>
+                                                            <li>
+                                                                <a href="@Url.Action("DMChanda", "Publisher")">Chanda</a>
+                                                            </li>
+                                                        </ul>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SMT", "Publisher")">Sisters of the Mount Tabore (SMT)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("OSS", "Publisher")">Holy Spirit Sisters (OSS)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SH", "Publisher")">Sisters of Sacred Heart (SH)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("DSS", "Publisher")">Dina Sevana Sabha (DSS)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SCV", "Publisher")">St Vincentian Sisters (SCV)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("SMS", "Publisher")">Snehagiri Missionary Sisters (SMS)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("LSJ", "Publisher")">Little Sisters of Jesus (LSJ)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("CSJB", "Publisher")">Sisters of John the Baptist (CSJB)</a>
+                                                    </li>
+                                                    <li><a href="@Url.Action("SMA", "Publisher")">Salesian Sisters (FMA)</a>
+                                                        </li>
+                                                </ul>
+                                    </li>
+                                            <li>
+                                                <a href="#">More Links</a>
+                                                <ul>
+
+                                                    <li>
+                                                        <a href="@Url.Action("SB", "Publisher")">Baselian Sisters (SB)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("FMM", "Publisher")">Franciscan Missionary Sisters (FMM)</a>
+                                                    </li>
+                                                    @*<li>
+                                                        <a href="@Url.Action("SMT", "Publisher")">SMT</a>
+                                                    </li>*@
+                                                    <li>
+                                                        <a href="@Url.Action("GSS", "Publisher")">Gethsemane Samarpitha Satsangam (GSS)</a>
+                                                    </li>
+                                                    
+                                                    <li>
+                                                        <a href="@Url.Action("SOC", "Publisher")">Sisters of Charity (SOC)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("FDSHJ", "Publisher")">Fervent Daughters of the Sacred Heart of Jesus (FDSHJ)</a>
+                                                    </li>
+                                                    <li>
+                                                        <a href="@Url.Action("AMU", "Publisher")">Unity Sisters (AMU)</a>
+                                                    </li>
+
+                                                </ul>
+                                            </li>
+                                </ul>
+                                        
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Institutions", "Publisher")">Institutions</a>
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action("Ecclesiastical", "Publisher")">Ecclesiastical</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Charitable", "Publisher")">Charitable</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Educational", "Publisher")">Educational</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Others", "Publisher")">Others</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <a href="@Url.Action("Publications", "Publisher")">Publications</a>
+                                <ul>
+                                    <li>
+                                        <a href="@Url.Action("Magazines", "Publisher")">Magazines</a>
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("ChristavaKahalam", "Publisher")">Christava Kahalam</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Aikyadeepam", "Publisher")">Aikyadeepam</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Viswasabhodhini", "Publisher")">Viswasabhodhini</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("MalankaraNadham", "Publisher")">Malankara Nadham</a>
+                                            </li>
+                                            @*<li>
+                                                <a href="@Url.Action("MalankaraBalan", "Publisher")">Malankara Balan</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Pushpavani", "Publisher")">Pushpavani</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("KudumbaJyothis", "Publisher")">Kudumba Jyothis</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("MalankaraVilakku", "Publisher")">Malankara Vilakku</a>
+                                            </li>*@
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Bulletin", "Publisher")">Bulletin</a>
+                                        <ul>
+                                            <li>
+                                                <a href="@Url.Action("MajorAthibhadrasan", "Publisher")">Major Archieparchial Bulletin</a>
+                                            </li>
+                                            @*<li>
+                                                <a href="@Url.Action("GirideepamTLA", "Publisher")">Girideepam TLA</a>
+                                            </li>*@
+                                            <li>
+                                                <a href="@Url.Action("DiocesanBulletinMTM", "Publisher")">Diocesan Bulletin</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("AmalaVoiceMVK", "Publisher")">Amala Voice</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("BatheryRoopathBullettin", "Publisher")">Roopatha Bulletin</a>
+                                            </li>
+                                            @*<li>
+                                                <a href="@Url.Action("MalankaraVoiceDelhi", "Publisher")">Malankara Voice Delhi</a>
+                                            </li>*@
+                                            <li>
+                                                <a href="@Url.Action("TheEphremite", "Publisher")">The Ephremite</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("SanthomVoice", "Publisher")">Santhom Voice</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Girinadam", "Publisher")">Girinadam</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Vimalanadam", "Publisher")">Vimalanadam</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("ShanthiVani", "Publisher")">Shanthi Vani</a>
+                                            </li>
+                                            <li>
+                                                <a href="@Url.Action("Exodus", "Publisher")">Exodus</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("MalankaraBulletin", "Publisher")">Malankara</a>
+                                     </li>
+                                    <li>
+                                        <a href="@Url.Action("PastoralLetters", "Publisher")">Pastoral Letters & Circulars</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("Lectionary", "Publisher")">Lectionary</a>
+                                    </li>
+                                    <li>
+                                        <a href="@Url.Action("IvanianVoice", "Publisher")">Ivanian Voice</a>
+                                    </li>
+                                </ul>
+                            </li>
+
+                            @*<li><a href="contact-us.php">Contact Us</a></li>*@
+                        </ul>
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="banner">
+        @*<img src="~/Content/Website/images/banner/1.jpg" width="1080" height="300" class="img-responsive">*@
+            @*<img id="img_logo" alt="Logo" src="@Url.Content("~/Content/Website/images/banner/1.jpg")" />*@
+            <img width="1080" height="300" class="img-responsive" src="@Url.Content(ViewBag.Header)" />
+            
+        </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8 col-xs-8 col-xxs">
+                @RenderBody()
+            </div>
+
+            <div class="col-md-4 col-xs-4 col-xxs">
+                <h2 class="h2">Quick Links</h2>
+                <ul class="list">
+                    <li><a href="@Url.Action("Index", "PriestSearch")">Priest Directory</a></li>
+                    <li><a href="@Url.Action("Index", "ParishSearch")">Parish Directory</a></li>
+                    <li><a href="@Url.Action("AllNews", "Publisher")">News & Events  </a></li>
+                    <li><a href="@Url.Action("Index", "PhotoGallery")">Gallery</a></li>
+                    <li><a href="#">Contact Info </a></li>
+                </ul>
+                <div class="well">
+                    <h2 class="h2">News &amp; Events </h2>
+                    @*<div class="n-item">
+                        <h3 class="h4">Another Post with Everything</h3>
+                        <p class="small">September 17,2014 </p>
+                        <p><img src="~/Content/Website/images/img-1.jpg" width="74" height="56" class="pull-left img-f">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed eleifend urna eu sapien. Quisque posuere nunc eu massa. Praesent bibendum lorem non leo. Morbi volutpat, urna eu fermentum rutrum, ligula lacus interdum mauris, ac pulvinar libero pede a enim. Etiam commodo malesuada ante. Donec nec ligula. Curabitur mollis semper diam. </p>
+                        <div class="text-right"><a href="@Url.Action("AllNews", "Publisher")"><strong>Read All...</strong></a></div>
+                    </div>*@
+                    @Html.Partial("_NewsInnerPartial")
+                </div>
+
+                <div class="gallery clearfix">
+                    <h4>Video</h4>
+                    <div class="">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            @*<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>*@
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wFZdAmI9ALk" allowfullscreen></iframe>
+                        </div>
+                        <p class="pull-right">
+                            <br>
+                            <a href="@Url.Action("Index", "YouTube")"><strong>View All &raquo;</strong></a>&nbsp;&nbsp;&nbsp;
+                            @*<a href="#"><strong>View All &raquo;</strong></a>&nbsp;&nbsp;&nbsp;*@
+                        </p>
+                    </div>
+                </div>
+                <div class="gallery">
+                    <h4>Photo Gallery</h4>
+                    <div class="ga-img">
+                        <div class="row">
+                            <div class="col-xs-6"><a href="@Url.Action("Index", "PhotoGallery")"><img class="img-responsive " src="images/gallery/1.jpg"></a></div>
+                            <div class="col-xs-6"><a href="@Url.Action("Index", "PhotoGallery")"><img class="img-responsive " src="images/gallery/2.jpg"></a></div>
+                        </div>
+                        <div class="row">
+                            <div class="col-xs-6"><a href="@Url.Action("Index", "PhotoGallery")"><img class="img-responsive " src="images/gallery/4.jpg"></a></div>
+                            <div class="col-xs-6"><a href="@Url.Action("Index", "PhotoGallery")"><img class="img-responsive " src="images/gallery/5.jpg"></a></div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row f2">
+            <div class="col-md-5">
+                <span class="social">
+                    <a href="http://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="http://facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="http://plus.google.com" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                </span>
+            </div>
+            <div class="col-md-7 design">&copy; Copy Right The Syro-Malankara Catholic Church. All Rights Reserved.</div>
+            <div class="col-md-7 design">Designed by <a href="http://designatindia.com">Design at India</a></div>
+        </div>
+    </div>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+    <script src="~/Content/Website/js/bootstrap.min.js"></script>
+    <script type="text/javascript">
+        $(function () {
+            if ($(window).width() <= 480) {
+                $(".bxslider li img").each(function () {
+                    $(this).attr("src", $(this).attr("src").replace("images/banner/", "images/banner/480/"));
+                });
+            }
+        });
+        $(document).ready(function () {
+            $(window).scroll(function () {
+                var h = $(window).height();
+                var scrollTop = $(window).scrollTop();
+                // now on the basis of scrollTop value show your div
+                if (scrollTop > 90) { $('.main-header').addClass('sticky'); } else { $('.main-header').removeClass('sticky'); }
+                // and so on
+            })
+        })
+    </script>
+    <script type="text/javascript" src="~/Content/Website/js/flexy-menu.js"></script>
+    <script type="text/javascript">$(document).ready(function () { $(".flexy-menu").flexymenu({ speed: 400, indicator: true }); });</script>
+    <script language=Javascript>
+<!--
+function isNumberKey(evt)
+{
+var charCode = (evt.which) ? evt.which : event.keyCode
+if (charCode > 31 && (charCode < 48 || charCode > 57))
+return false;
+
+return true;
+}
+//-->
+    </script>
+    <script type="text/javascript" src="~/Content/Website/fbox/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/Website/fbox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                wrapCSS: 'fancybox-custom',
+                closeClick: true,
+                openEffect: 'elastic',
+                closeEffect: 'elastic',
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    },
+                    overlay: {
+                        css: {
+                            'background': 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

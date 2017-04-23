@@ -1,0 +1,82 @@
+﻿http://news.catholicate.net/NewsDetails.aspx?NewsType=News&ID=248
+
+@Url.Action("NewsDetails", "Publisher", new { id = item.ID })
+
+
+http://news.catholicate.net/Images/News/corepiscopo%20card.jpg
+
+http://demo.aspnetawesome.com/GridSpreadsheetDemo
+[AllowHtml]
+
+@Html.ActionLink("Edit", "Edit", new { id = item.ID })
+
+<a class="m_item m_item_1" href="@Url.Action("Index", "Publisher")">&nbsp;</a>
+
+@Html.Raw(HttpUtility.HtmlDecode(Model.LongDesc));
+
+Uiiversal Church
+
+Church - 
+	-----
+
+Dioesh or Eparchies
+	---Publication
+        ---Inistutions
+
+----
+Parish
+
+[AllowHtml]
+
+ @Html.DropDownListFor(model => model.ChurchId, new SelectList
+(ViewBag.ChurchList, "ID", "Name"), new { @class = "form-control" })
+
+ @Html.DropDownListFor(model => model.PriestId, new SelectList
+(ViewBag.PriestList, "ID", "Name"), new { @class = "form-control" })
+
+@Html.DropDownListFor(model => model.CuriaId, new SelectList(ViewBag.CuriaList, 
+"ID", "CuriaName"), new { @class = "form-control" })
+
+
+
+<h1 class="h1">THE SYRO-MALANKARA CATHOLIC CHURCH:
+HISTORICAL OVERVIEW</h1>
+
+
+<h2 class="h2">News &amp; Events </h2>
+
+
+.h1 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #ad005f;
+}
+
+
+LateHeads
+LateBishops
+LatePrelates
+Pope
+MajorArchBishopa
+SYNODFATHERS
+SynodFathers
+
+Curia
+PermanentSynod
+Offices
+SynodalCommissions
+Tribunals
+Canonisation
+
+
+
+
+ALTER TABLE [Priests]
+ALTER COLUMN [Field1] varchar(200)
+ALTER TABLE [Priests]
+ALTER COLUMN [Field2] varchar(200)

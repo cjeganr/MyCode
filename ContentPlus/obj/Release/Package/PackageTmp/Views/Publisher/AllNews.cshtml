@@ -1,0 +1,45 @@
+﻿@model IEnumerable<ContentPlus.Models.NewsAdmin>
+
+@{
+    ViewBag.Title = "AllNews";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    //@item.FileName  // instead .FileName use property which u used in ur model class
+
+    @*<div class="item">
+        @if (item.Photo1 != null)
+        {
+            <img src="@Url.Content(item.Photo1)" width="107" height="82" class="pull-left img-f">
+        }
+        else
+        {
+            <img src="~/Articles/Images/No_image.png" width="107" height="82" class="pull-left img-f">
+        }
+
+        <h3>@item.Title</h3>
+        <p class="small">@String.Format("{0:D}", @item.CreatedDate)</p>
+        <p>@Html.Raw(HttpUtility.HtmlDecode(item.Content.Substring(0, 250)));</p>
+        <p class="text-right"><a href="@Url.Action("NewsDetails", "Publisher", new { id = item.ID })"><strong>Read More...</strong></a></p>
+    </div>*@
+    <img src='@Url.Content("http://news.catholicate.net/" + item.FilePath)' width="107"  height="82" class="pull-left img-f">
+    <div class="item">
+        <h3>@item.Title</h3>
+        <p class="small">@String.Format("{0:D}", @item.CreatedDate)</p>
+        
+        @if (item.Description.Length > 250)
+        {
+            <p>@Html.Raw(HttpUtility.HtmlDecode(item.Description.Substring(0, 250)));</p>
+        }
+        else
+        {
+            <p>@Html.Raw(HttpUtility.HtmlDecode(item.Description));</p>
+        }
+
+        <p class="text-right"><a href='@Url.Content("http://news.catholicate.net/NewsDetails.aspx?NewsType=News&ID=" + item.ID)'><strong>Read More...</strong></a></p>
+        
+    </div>
+
+}

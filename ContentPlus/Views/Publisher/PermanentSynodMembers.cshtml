@@ -1,0 +1,58 @@
+﻿@model IEnumerable<ContentPlus.Models.CuriaPriest>
+@{
+    ViewBag.Title = "PermanentSynodMembers";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+
+<h3>
+    MAJOR ARCHIEPISCOPAL CURIA
+</h3>
+<h5>
+    CATHOLICATE CENTRE, TRIVANDRUM- 695 004, KERALA, INDIA
+</h5>
+<h6>
+    Tel. 0091-471-2558864, 2555262 Fax 0091-471-2553244<br />
+    E-mail: mcccuria@gmail.com<br />
+    Website: www.malankaracatholicchurch.net
+</h6>
+<div class="tablep">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Position</th>
+            </tr>
+        </thead>
+
+        <tbody>
+@foreach (var item in Model)
+{
+            <tr>
+                <td>@item.Name</td>
+                <td>@item.Positionheld</td>
+            </tr>
+}
+        </tbody>
+    </table>
+</div>
+
+    @*<div style="padding-bottom:20px; border-bottom:dashed 1px #CCC; margin-bottom:30px;">
+        <div class="row">
+            <div class="col-xs-4 col-xxs">
+                <img src="@Url.Content(item.Photo)" height="360" class="img-responsive img-thumbnail">
+            </div>
+            <div class="col-xs-8 col-xxs">
+                <h3 class="h4">@Html.DisplayFor(modelItem => item.Name)</h3>
+                <h6 class="SubTitle">@Html.DisplayFor(modelItem => item.Field1)</h6>
+                <p><strong>Diocese :</strong> @Html.DisplayFor(modelItem => item.Diocese)</p>
+                <p><strong>Parish :</strong> @Html.DisplayFor(modelItem => item.Parish)</p>
+                <p><strong>Date Of Birth :</strong> @Html.DisplayFor(modelItem => item.DOB)</p>
+                @Html.ActionLink("More Details", "PriestDetails", new { id = item.ID }, new { @class = "btn btn-sm btn-primary" })
+                @*<a class="btn btn-sm btn-primary" href="#">More Details</a>
+            </div>
+        </div>
+    </div>*@
+              
+
+                     
+                   

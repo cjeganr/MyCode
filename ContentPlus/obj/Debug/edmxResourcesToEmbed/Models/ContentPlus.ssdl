@@ -1,0 +1,245 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="ContentPlusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+  <EntityType Name="Articles">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Category1" Type="varchar" MaxLength="100" />
+    <Property Name="Category2" Type="varchar" MaxLength="100" />
+    <Property Name="Section" Type="varchar" MaxLength="100" />
+    <Property Name="Photo1" Type="varchar" MaxLength="100" />
+    <Property Name="Photo2" Type="varchar" MaxLength="100" />
+    <Property Name="Photo3" Type="varchar" MaxLength="100" />
+    <Property Name="PDF1" Type="varchar" MaxLength="100" />
+    <Property Name="PDF2" Type="varchar" MaxLength="100" />
+    <Property Name="PDF3" Type="varchar" MaxLength="100" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsSpecial" Type="bit" />
+    <Property Name="Custom1" Type="varchar" MaxLength="255" />
+    <Property Name="Custom2" Type="varchar" MaxLength="255" />
+    <Property Name="Custom3" Type="varchar" MaxLength="255" />
+    <Property Name="Custom4" Type="varchar" MaxLength="255" />
+    <Property Name="Custom5" Type="varchar" MaxLength="255" />
+    <Property Name="Custom6" Type="varchar" MaxLength="255" />
+    <Property Name="Author" Type="varchar" MaxLength="50" />
+    <Property Name="CreatedDate" Type="datetime" />
+    <Property Name="UpdatedDate" Type="datetime" />
+  </EntityType>
+  <EntityType Name="Church">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityType Name="ChurchMembers">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChurchId" Type="int" Nullable="false" />
+    <Property Name="PriestId" Type="int" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="50" />
+    <Property Name="PositionHeld" Type="varchar" MaxLength="50" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Curia">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ChurchId" Type="int" Nullable="false" />
+    <Property Name="CuriaName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="WebSite" Type="varchar" MaxLength="100" />
+    <Property Name="Field1" Type="varchar" MaxLength="50" />
+    <Property Name="Field2" Type="varchar" MaxLength="50" />
+    <Property Name="Field3" Type="varchar" MaxLength="50" />
+    <Property Name="Field4" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="CuriaMembers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="CuriaId" Type="int" Nullable="false" />
+    <Property Name="PriestId" Type="int" Nullable="false" />
+    <Property Name="Department" Type="varchar" MaxLength="100" />
+    <Property Name="Positionheld" Type="varchar" MaxLength="100" />
+    <Property Name="Status" Type="varchar" MaxLength="50" />
+    <Property Name="Field1" Type="varchar" MaxLength="100" />
+    <Property Name="Field2" Type="varchar" MaxLength="100" />
+    <Property Name="Field3" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="DailyMessages">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Message" Type="varchar" MaxLength="200" Nullable="false" />
+    <Property Name="Field1" Type="varchar" MaxLength="50" />
+    <Property Name="Field2" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Eparchies">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProvinceId" Type="int" Nullable="false" />
+    <Property Name="EparchiesName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="WebSite" Type="varchar" MaxLength="100" />
+    <Property Name="Field1" Type="varchar" MaxLength="50" />
+    <Property Name="Field2" Type="varchar" MaxLength="50" />
+    <Property Name="Field3" Type="varchar" MaxLength="50" />
+    <Property Name="Field4" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="InstitutionMembers">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="InstitutionId" Type="int" Nullable="false" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Designation" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="WebSite" Type="varchar" MaxLength="100" />
+    <Property Name="Field1" Type="varchar" MaxLength="50" />
+    <Property Name="Field2" Type="varchar" MaxLength="50" />
+    <Property Name="Field3" Type="varchar" MaxLength="50" />
+    <Property Name="Field4" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Institutions">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="EparchiesId" Type="int" Nullable="false" />
+    <Property Name="Region" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="100" />
+    <Property Name="Mobile" Type="varchar" MaxLength="100" />
+    <Property Name="Email" Type="varchar" MaxLength="100" />
+    <Property Name="WebSite" Type="varchar" MaxLength="100" />
+    <Property Name="Field1" Type="varchar" MaxLength="50" />
+    <Property Name="Field2" Type="varchar" MaxLength="50" />
+    <Property Name="Field3" Type="varchar" MaxLength="50" />
+    <Property Name="Field4" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="NewsAdmin">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" />
+    <Property Name="FilePath" Type="varchar" MaxLength="50" />
+    <Property Name="CategoryID" Type="int" Nullable="false" />
+    <Property Name="DisplaySectionID" Type="int" Nullable="false" />
+    <Property Name="IsActive" Type="bit" />
+    <Property Name="IsSpecial" Type="bit" />
+    <Property Name="IsMarkDeleted" Type="bit" />
+    <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+    <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+  </EntityType>
+  <EntityType Name="Parish">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Estd" Type="varchar" MaxLength="50" />
+    <Property Name="Patron" Type="varchar" MaxLength="100" />
+    <Property Name="Diocese" Type="varchar" MaxLength="100" />
+    <Property Name="Address" Type="varchar" MaxLength="100" />
+    <Property Name="Phone" Type="varchar" MaxLength="50" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Website" Type="varchar" MaxLength="50" />
+    <Property Name="Fbid" Type="varchar" MaxLength="50" />
+    <Property Name="Vicar" Type="varchar" MaxLength="100" />
+    <Property Name="Asstvicar1" Type="varchar" MaxLength="100" />
+    <Property Name="Asstvicar2" Type="varchar" MaxLength="100" />
+    <Property Name="District" Type="varchar" MaxLength="100" />
+    <Property Name="Field1" Type="varchar" MaxLength="100" />
+    <Property Name="Field2" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Priests">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Diocese" Type="varchar" MaxLength="100" />
+    <Property Name="Parish" Type="varchar" MaxLength="100" />
+    <Property Name="LongDesc" Type="nvarchar(max)" />
+    <Property Name="HomeDiocese" Type="varchar" MaxLength="100" />
+    <Property Name="HomeParish" Type="varchar" MaxLength="100" />
+    <Property Name="Seminary" Type="varchar" MaxLength="100" />
+    <Property Name="DOB" Type="varchar" MaxLength="50" />
+    <Property Name="DateOfOrdination" Type="varchar" MaxLength="50" />
+    <Property Name="MaritalStatus" Type="varchar" MaxLength="50" />
+    <Property Name="Education" Type="varchar" MaxLength="50" />
+    <Property Name="PermanentAddress" Type="varchar" MaxLength="100" />
+    <Property Name="PresentAddress" Type="varchar" MaxLength="100" />
+    <Property Name="State" Type="varchar" MaxLength="50" />
+    <Property Name="Country" Type="varchar" MaxLength="50" />
+    <Property Name="Pin" Type="varchar" MaxLength="10" />
+    <Property Name="Phone" Type="varchar" MaxLength="10" />
+    <Property Name="Mobile" Type="varchar" MaxLength="10" />
+    <Property Name="Email" Type="varchar" MaxLength="50" />
+    <Property Name="Website" Type="varchar" MaxLength="50" />
+    <Property Name="Photo" Type="varchar" MaxLength="50" />
+    <Property Name="OtherDetails1" Type="varchar" MaxLength="100" />
+    <Property Name="OtherDetails2" Type="varchar" MaxLength="100" />
+    <Property Name="Field1" Type="varchar" MaxLength="200" />
+    <Property Name="Field2" Type="varchar" MaxLength="200" />
+    <Property Name="Field3" Type="varchar" MaxLength="50" />
+    <Property Name="Field4" Type="varchar" MaxLength="50" />
+    <Property Name="Field5" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Provinces">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+  </EntityType>
+  <EntityContainer Name="ContentPlusModelStoreContainer">
+    <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Church" EntityType="Self.Church" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ChurchMembers" EntityType="Self.ChurchMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Curia" EntityType="Self.Curia" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="CuriaMembers" EntityType="Self.CuriaMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DailyMessages" EntityType="Self.DailyMessages" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Eparchies" EntityType="Self.Eparchies" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="InstitutionMembers" EntityType="Self.InstitutionMembers" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Institutions" EntityType="Self.Institutions" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="NewsAdmin" EntityType="Self.NewsAdmin" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Parish" EntityType="Self.Parish" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Priests" EntityType="Self.Priests" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Provinces" EntityType="Self.Provinces" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

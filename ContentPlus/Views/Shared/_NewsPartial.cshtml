@@ -1,0 +1,57 @@
+﻿
+@if(ViewData["NewsList"] != null)
+{
+    foreach (var item in ViewData["NewsList"] as IEnumerable<ContentPlus.Models.NewsAdmin>)
+{
+    //@item.FileName  // instead .FileName use property which u used in ur model class
+   
+    <div class="item">
+        @*@if(item.Photo1 != null)
+        {
+            <img src="@Url.Content(item.Photo1)" width="107" height="82" class="pull-left img-f">
+        }
+        else
+        {
+            <img src="~/Articles/Images/No_image.png" width="107" height="82" class="pull-left img-f">
+        }*@
+       
+        <a href='@Url.Content("http://news.catholicate.net/NewsDetails.aspx?NewsType=News&ID=" + item.ID)'>
+            <img src='@Url.Content("http://news.catholicate.net/" + item.FilePath)' width="107" height="82" class="pull-left img-f">
+            </a>
+        <a href='@Url.Content("http://news.catholicate.net/NewsDetails.aspx?NewsType=News&ID=" + item.ID)'>
+            <h3>@item.Title</h3>
+            </a>
+            <p class="small">@String.Format("{0:D}", @item.CreatedDate)</p>
+            @if (item.Description.Length > 250)
+            {
+                <p>@Html.Raw(HttpUtility.HtmlDecode(item.Description.Substring(0, 250)));</p>
+            }
+            else
+            {
+                <p>@Html.Raw(HttpUtility.HtmlDecode(item.Description));</p>
+            }
+            <p class="text-right"><a href='@Url.Content("http://news.catholicate.net/NewsDetails.aspx?NewsType=News&ID=" + item.ID)'><strong>Read More...</strong></a></p>
+            @* <p class="text-right"><a href="@Url.Action("NewsDetails", "Publisher", new { id = item.ID })"><strong>Read More...</strong></a></p>*@
+</div>
+    
+}
+
+}
+
+
+
+
+@*<div class="item">
+    <img src="~/Content/Website/images/img-1.jpg" width="107" height="82" class="pull-left img-f">
+    <h3>Another Post with Everything</h3>
+    <p class="small">September 17,2014 </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed eleifend urna eu sapien. Quisque posuere nunc eu massa. Praesent bibendum lorem non leo. Morbi volutpat, urna eu fermentum rutrum, ligula lacus interdum mauris, ac pulvinar libero pede a enim. Etiam commodo malesuada ante. Donec nec ligula. Curabitur mollis semper diam. </p>
+    <p class="text-right"><a href="#"><strong>Read More...</strong></a></p>
+</div>
+<div class="item">
+    <img src="~/Content/Website/images/img-1.jpg" width="107" height="82" class="pull-left img-f">
+    <h3>Another Post with Everything</h3>
+    <p class="small">September 17,2014 </p>
+    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Sed eleifend urna eu sapien. Quisque posuere nunc eu massa. Praesent bibendum lorem non leo. Morbi volutpat, urna eu fermentum rutrum, ligula lacus interdum mauris, ac pulvinar libero pede a enim. Etiam commodo malesuada ante. Donec nec ligula. Curabitur mollis semper diam. </p>
+    <p class="text-right"><a href="#"><strong>Read More...</strong></a></p>
+</div>*@

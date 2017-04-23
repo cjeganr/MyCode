@@ -1,0 +1,12 @@
+﻿@model ContentPlus.Models.Curia
+@{
+    ViewBag.Title = "Curia";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+<h2>
+    @Html.DisplayFor(model => model.CuriaName)
+</h2>
+<br />
+<div>
+    @Html.Raw(HttpUtility.HtmlDecode(Model.Description))
+</div>

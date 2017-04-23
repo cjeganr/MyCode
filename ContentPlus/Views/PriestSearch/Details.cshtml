@@ -1,0 +1,123 @@
+﻿@model ContentPlus.Models.Priest
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+<div class="tablep">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th colspan="2">@Html.DisplayFor(model => model.Name)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <img src="@Url.Content(Model.Photo)" width="300" height="215" class="img-responsive">
+                </td>
+            </tr>
+            <tr>
+                @*<td width="25%">
+                    <img src="@Url.Content(Model.Photo)" width="215" height="140" class="img-responsive">
+                </td>*@
+                <td width="75%">
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                <td>Diocese</td>
+                                <td>@Html.DisplayFor(model => model.Diocese)</td>
+
+                            </tr>
+                            <tr>
+                                <td>Parish</td>
+                                <td>@Html.DisplayFor(model => model.Parish)</td>
+
+                            </tr>
+                            <tr>
+                                <td>HomeDiocese</td>
+                                <td>@Html.DisplayFor(model => model.HomeDiocese)</td>
+                            </tr>
+                            <tr>
+                                <td>HomeParish</td>
+                                <td>@Html.DisplayFor(model => model.HomeParish)</td>
+                            </tr>
+                            <tr>
+                                <td>Seminary</td>
+                                <td>@Html.DisplayFor(model => model.Seminary)</td>
+                            </tr>
+                            <tr>
+                                <td>DOB</td>
+                                <td>@Html.DisplayFor(model => model.DOB)</td>
+                            </tr>
+                            <tr>
+                                <td>Date Of Ordination</td>
+                                <td>@Html.DisplayFor(model => model.DateOfOrdination)</td>
+                            </tr>
+                            <tr>
+                                <td>Feast Day</td>
+                                <td>@Html.DisplayFor(model => model.Field1)</td>
+                            </tr>
+                            <tr>
+                                <td>Education</td>
+                                <td>@Html.DisplayFor(model => model.Education)</td>
+                            </tr>
+                            <tr>
+                                <td>Permanent Address</td>
+                                <td>@Html.DisplayFor(model => model.PermanentAddress)</td>
+                            </tr>
+                            <tr>
+                                <td>Present Address</td>
+                                <td>@Html.DisplayFor(model => model.PresentAddress)</td>
+                            </tr>
+                            <tr>
+                                <td>State</td>
+                                <td>@Html.DisplayFor(model => model.State)</td>
+                            </tr>
+                            <tr>
+                                <td>Country</td>
+                                <td>@Html.DisplayFor(model => model.Country)</td>
+                            </tr>
+                            <tr>
+                                <td>Pin</td>
+                                <td>@Html.DisplayFor(model => model.Pin)</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>@Html.DisplayFor(model => model.Phone)</td>
+                            </tr>
+                            <tr>
+                                <td>Mobile</td>
+                                <td>@Html.DisplayFor(model => model.Mobile)</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>@Html.DisplayFor(model => model.Email)</td>
+                            </tr>
+                            <tr>
+                                <td>Website</td>
+                                <td>@Html.DisplayFor(model => model.Website)</td>
+                            </tr>
+                            <tr>
+                                <td>Description</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    @Html.Raw(HttpUtility.HtmlDecode(Model.LongDesc));
+                                </td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+            
+            </tr>
+            
+        </tbody>
+    </table>
+</div>

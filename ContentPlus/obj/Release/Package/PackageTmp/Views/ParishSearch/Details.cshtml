@@ -1,0 +1,86 @@
+﻿@model ContentPlus.Models.Parish
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+<div class="tablep">
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th colspan="2">@Html.DisplayFor(model => model.Name)</th>
+            </tr>
+        </thead>
+        <tbody>
+            
+            <tr>
+                @*<td width="25%">
+                        <img src="@Url.Content(Model.Photo)" width="215" height="140" class="img-responsive">
+                    </td>*@
+                <td width="75%">
+                    <table class="table table-condensed">
+                        <tbody>
+                            <tr>
+                                <td>Estd</td>
+                                <td>@Html.DisplayFor(model => model.Estd)</td>
+
+                            </tr>
+                            <tr>
+                                <td>Patron</td>
+                                <td>@Html.DisplayFor(model => model.Patron)</td>
+
+                            </tr>
+                            <tr>
+                                <td>Diocese</td>
+                                <td>@Html.DisplayFor(model => model.Diocese)</td>
+                            </tr>
+                            <tr>
+                                <td>District</td>
+                                <td>@Html.DisplayFor(model => model.District)</td>
+                            </tr>
+                            <tr>
+                                <td>Address</td>
+                                <td>@Html.DisplayFor(model => model.Address)</td>
+                            </tr>
+                            <tr>
+                                <td>Phone</td>
+                                <td>@Html.DisplayFor(model => model.Phone)</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                                <td>@Html.DisplayFor(model => model.Email)</td>
+                            </tr>
+                            <tr>
+                                <td>Website</td>
+                                <td>@Html.DisplayFor(model => model.Website)</td>
+                            </tr>
+                            <tr>
+                                <td>Fbid</td>
+                                <td>@Html.DisplayFor(model => model.Fbid)</td>
+                            </tr>
+                            <tr>
+                                <td>Vicar</td>
+                                <td>@Html.DisplayFor(model => model.Vicar)</td>
+                            </tr>
+                            <tr>
+                                <td>Asstvicar1</td>
+                                <td>@Html.DisplayFor(model => model.Asstvicar1)</td>
+                            </tr>
+                            <tr>
+                                <td>Asstvicar2</td>
+                                <td>@Html.DisplayFor(model => model.Asstvicar2)</td>
+                            </tr>
+                            <tr>
+                                <td></td>
+                                <td>
+                                    @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </td>
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>

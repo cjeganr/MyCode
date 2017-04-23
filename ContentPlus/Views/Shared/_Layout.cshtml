@@ -1,0 +1,234 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" href="images/favicon.ico">
+    <title>The Syro-Malankara Catholic Church</title>
+    <link href="~/Content/Website/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/Content/Website/css/style.css" rel="stylesheet">
+    <link href="~/Content/Website/css/font-awesome.min.css" rel="stylesheet">
+    <link href="~/Content/Website/bxslider/jquery.bxslider.css" rel="stylesheet" media="screen">
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,300,700,900' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body class="home">
+    <div class="container">
+        <div class="main text-center" style="position:relative;">
+            <img src="~/Content/Website/images/main.png" width="700" height="600" class="main_image">
+            <img src="~/Content/Website/images/mobile.png" width="700" height="600" class="mobile_image">
+
+            <div class="logo"><a href="/"><img src="~/Content/Website/images/logo.png" width="300" height="135" alt="Logo"></a></div>
+            <div class="menu">
+                <div class="menu_container">
+                    <a class="m_item m_item_1" href="@Url.Action("Index", "Publisher")">&nbsp;</a>
+                    <a class="m_item m_item_2" href="@Url.Action("Hirerachy", "Publisher")">&nbsp;</a>
+                    <a class="m_item m_item_3" href="@Url.Action("Curia", "Publisher")">&nbsp;</a>
+                    <a class="m_item m_item_4" href="@Url.Action("Provinces", "Publisher")">&nbsp;</a>
+                    <a class="m_item m_item_5" href="@Url.Action("Religious", "Publisher")">&nbsp;</a>
+                    <a class="m_item m_item_6" href="@Url.Action("Institutions", "Publisher")">&nbsp;</a>
+                    <a class="m_item m_item_7" href="@Url.Action("Publications", "Publisher")">&nbsp;</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="maincontents">
+        <div class="container">
+       
+            <div class="row">
+                <a href="#"><img src="~/Images/Ad/DoctorMeet.jpg" /></a>
+             </div>
+         
+                <div class="row">
+                    <div class="col-md-4 col-xs-12 col-xxs">
+                        <h2 class="h4">Welcome to Catholicate</h2>
+                        <p>@Html.Partial("_WelcomePartial")</p><br />
+                        <a href="@Url.Action("Index", "Publisher")">[Read More] </a>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6 col-xxs">
+                        <h2 class="h4">News &amp; Events </h2>
+                        <div class="sliderssrnav">
+                            @Html.Partial("_NewsPartial")
+                        </div>
+                    </div>
+
+                    <div class="col-md-4 col-xs-6 col-xxs testimonial">
+                        <div class="s_cont">
+                            @using (Html.BeginForm("Index", "PriestSearch", FormMethod.Get))
+                        {
+                        <div class="searchbar clearfix">
+                            <div class="input-group">
+                                <input type="text" name="name" placeholder="Search for..." class="form-control" required>
+                                <span class="input-group-btn">
+                                    <input type="submit" name="submit" value="Go!" class="btn btn-primary">
+                                </span>
+                            </div>
+                        </div>
+                        }
+                        </div>
+
+                        <a href="#"><img src="~/Content/Website/images/ad.jpg" width="380" height="270" class="img-responsive"></a>
+                    </div>
+                </div>
+            </div>
+        @RenderBody()
+    </div>
+    <div class="maincontents2">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-4 col-xxs">
+                    <div style="position:relative;">
+                        <img src="~/Content/Website/images/1.jpg" width="480" height="360" class="img-responsive">
+                        <a href="@Url.Action("Index", "PhotoGallery")"><div class="imgtit">Photo Gallery</div></a>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-xxs">
+                    <div style="position:relative;">
+                        <img src="~/Content/Website/images/2.jpg" width="480" height="360" class="img-responsive">
+                        <a href="@Url.Action("Index", "YouTube")"><div class="imgtit">Video Gallery</div></a>
+                    </div>
+                </div>
+                <div class="col-xs-4 col-xxs">
+                    <div style="position:relative;">
+                        <img src="~/Content/Website/images/Suvishesam.jpg" width="480" height="360" class="img-responsive">
+                        <a href="@Url.Action("SuviseshaSangam", "Publisher")"><div class="imgtit">Suvisesha Sangam</div></a>
+                    </div>
+                </div>
+                @*<div class="col-xs-4 col-xxs">
+                    <div class="pub">
+                        <h3 class="h2">Publications</h3>
+                        <p>Publication details.</p>
+                    </div>
+                </div>*@
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="row f2">
+            <div class="col-md-5">
+                <span class="social">
+                    <a href="http://twitter.com/" class="twitter"><i class="fa fa-twitter"></i></a>
+                    <a href="http://facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
+                    <a href="http://plus.google.com" class="google-plus"><i class="fa fa-google-plus"></i></a>
+                </span>
+            </div>
+            <div class="col-md-7 design">&copy; Copy Right The Syro-Malankara Catholic Church. All Rights Reserved.</div>
+            <div class="col-md-7 design">Designed by <a href="http://designatindia.com">Design at India</a></div>
+        </div>
+    </div>
+    <script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+    <script src="~/Content/Website/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="~/Content/Website/bxslider/jquery.bxslider.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $('.bxslider').bxSlider({
+                auto: true,
+                mode: 'fade',
+                adaptiveHeight: true,
+                pager: true,
+                controls: false
+            });
+        });
+    </script>
+    <script type="text/javascript" src="~/Content/Website/js/nav-resp.js"></script>
+    <script type="text/javascript" src="~/Content/Website/js/owl.carousel.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
+                items: 2,
+                navigation: true,
+                pagination: false,
+                autoPlay: true,
+                afterInit: function (elem) {
+                    var that = this
+                    that.owlControls.prependTo(elem)
+                }
+            });
+
+            $("#clientslist").owlCarousel({
+                items: 6,
+                autoHeight: true,
+                navigation: true,
+                pagination: false,
+                autoPlay: true,
+                afterInit: function (elem) {
+                    var that = this
+                    that.owlControls.prependTo(elem)
+                }
+            });
+
+            $(".sliderss").owlCarousel({
+                pagination: false,
+                autoPlay: 3000,
+                stopOnHover: true,
+                navigation: true,
+                paginationSpeed: 1000,
+                goToFirstSpeed: 2000,
+                singleItem: true,
+                autoHeight: true,
+                afterInit: function (elem) {
+                    var that = this
+                    that.owlControls.prependTo(elem)
+                }
+            });
+            $(".sliderssrnav").owlCarousel({
+                pagination: false,
+                autoPlay: 3000,
+                stopOnHover: true,
+                navigation: true,
+                paginationSpeed: 1000,
+                goToFirstSpeed: 2000,
+                singleItem: true,
+                autoHeight: true,
+                afterInit: function (elem) {
+                    var that = this
+                    that.owlControls.prependTo(elem)
+                }
+            });
+        });
+    </script>
+    <script language=Javascript>
+<!--
+function isNumberKey(evt)
+{
+var charCode = (evt.which) ? evt.which : event.keyCode
+if (charCode > 31 && (charCode < 48 || charCode > 57))
+return false;
+
+return true;
+}
+//-->
+    </script>
+    <script type="text/javascript" src="~/Content/Website/fbox/jquery.fancybox.js?v=2.1.5"></script>
+    <link rel="stylesheet" type="text/css" href="~/Content/Website/fbox/jquery.fancybox.css?v=2.1.5" media="screen" />
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".fancybox").fancybox({
+                wrapCSS: 'fancybox-custom',
+                closeClick: true,
+                openEffect: 'elastic',
+                closeEffect: 'elastic',
+                helpers: {
+                    title: {
+                        type: 'inside'
+                    },
+                    overlay: {
+                        css: {
+                            'background': 'rgba(238,238,238,0.85)'
+                        }
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+</html>

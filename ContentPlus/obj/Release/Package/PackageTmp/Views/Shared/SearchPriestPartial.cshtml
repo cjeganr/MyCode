@@ -1,0 +1,189 @@
+﻿@model IEnumerable<ContentPlus.Models.Priest>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Diocese)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Parish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LongDesc)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeDiocese)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HomeParish)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Seminary)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DOB)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateOfOrdination)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.MaritalStatus)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Education)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PermanentAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.PresentAddress)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.State)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Country)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Pin)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Phone)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Mobile)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Email)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Website)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Photo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherDetails1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherDetails2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Field1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Field2)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Field3)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Field4)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Field5)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Name)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Diocese)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Parish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LongDesc)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeDiocese)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HomeParish)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Seminary)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DOB)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateOfOrdination)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.MaritalStatus)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Education)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PermanentAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.PresentAddress)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.State)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Country)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Pin)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Phone)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Mobile)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Email)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Website)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Photo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherDetails1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherDetails2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Field1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Field2)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Field3)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Field4)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Field5)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ID })
+        </td>
+    </tr>
+}
+
+</table>

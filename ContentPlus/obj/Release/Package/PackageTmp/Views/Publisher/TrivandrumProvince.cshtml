@@ -1,0 +1,15 @@
+﻿@model ContentPlus.Models.Province
+
+@{
+    ViewBag.Title = "TrivandrumProvince";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+
+<h2>
+    @Html.DisplayFor(model => model.Name)
+</h2>
+<br />
+<div>
+    @Html.Raw(HttpUtility.HtmlDecode(Model.Description))
+</div>
+

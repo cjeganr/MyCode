@@ -1,0 +1,29 @@
+﻿@model ContentPlus.Models.Article
+
+@{
+    ViewBag.Title = "NewsDetails";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-xs-8 col-xxs">
+            <h1 class="h1">
+                @Html.DisplayFor(model => model.Title)
+            </h1>
+            <p>
+                @if (Model.Photo1 != null)
+                {
+                    <img src="@Url.Content(Model.Photo1)" width="247" height="222" class="pull-left img-f">
+                }
+                else
+                {
+                    <img src="~/Articles/Images/No_image.png" width="247" height="222" class="pull-left img-f">
+                }
+            </p>
+            <p>
+                @Html.Raw(HttpUtility.HtmlDecode(Model.Content))
+            </p>
+        </div>
+        </div>
+    </div>

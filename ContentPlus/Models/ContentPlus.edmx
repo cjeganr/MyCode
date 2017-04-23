@@ -1,0 +1,765 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="2.0" xmlns:edmx="http://schemas.microsoft.com/ado/2008/10/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="ContentPlusModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
+        <EntityType Name="Articles">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Content" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="Category1" Type="varchar" MaxLength="100" />
+          <Property Name="Category2" Type="varchar" MaxLength="100" />
+          <Property Name="Section" Type="varchar" MaxLength="100" />
+          <Property Name="Photo1" Type="varchar" MaxLength="100" />
+          <Property Name="Photo2" Type="varchar" MaxLength="100" />
+          <Property Name="Photo3" Type="varchar" MaxLength="100" />
+          <Property Name="PDF1" Type="varchar" MaxLength="100" />
+          <Property Name="PDF2" Type="varchar" MaxLength="100" />
+          <Property Name="PDF3" Type="varchar" MaxLength="100" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsSpecial" Type="bit" />
+          <Property Name="Custom1" Type="varchar" MaxLength="255" />
+          <Property Name="Custom2" Type="varchar" MaxLength="255" />
+          <Property Name="Custom3" Type="varchar" MaxLength="255" />
+          <Property Name="Custom4" Type="varchar" MaxLength="255" />
+          <Property Name="Custom5" Type="varchar" MaxLength="255" />
+          <Property Name="Custom6" Type="varchar" MaxLength="255" />
+          <Property Name="Author" Type="varchar" MaxLength="50" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="UpdatedDate" Type="datetime" />
+        </EntityType>
+        <EntityType Name="Church">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityType Name="ChurchMembers">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChurchId" Type="int" Nullable="false" />
+          <Property Name="PriestId" Type="int" Nullable="false" />
+          <Property Name="Department" Type="varchar" MaxLength="50" />
+          <Property Name="PositionHeld" Type="varchar" MaxLength="50" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Curia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ChurchId" Type="int" Nullable="false" />
+          <Property Name="CuriaName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="100" />
+          <Property Name="Mobile" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="WebSite" Type="varchar" MaxLength="100" />
+          <Property Name="Field1" Type="varchar" MaxLength="50" />
+          <Property Name="Field2" Type="varchar" MaxLength="50" />
+          <Property Name="Field3" Type="varchar" MaxLength="50" />
+          <Property Name="Field4" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="CuriaMembers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="CuriaId" Type="int" Nullable="false" />
+          <Property Name="PriestId" Type="int" Nullable="false" />
+          <Property Name="Department" Type="varchar" MaxLength="100" />
+          <Property Name="Positionheld" Type="varchar" MaxLength="100" />
+          <Property Name="Status" Type="varchar" MaxLength="50" />
+          <Property Name="Field1" Type="varchar" MaxLength="100" />
+          <Property Name="Field2" Type="varchar" MaxLength="100" />
+          <Property Name="Field3" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="DailyMessages">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Message" Type="varchar" MaxLength="200" Nullable="false" />
+          <Property Name="Field1" Type="varchar" MaxLength="50" />
+          <Property Name="Field2" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Eparchies">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ProvinceId" Type="int" Nullable="false" />
+          <Property Name="EparchiesName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="100" />
+          <Property Name="Mobile" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="WebSite" Type="varchar" MaxLength="100" />
+          <Property Name="Field1" Type="varchar" MaxLength="50" />
+          <Property Name="Field2" Type="varchar" MaxLength="50" />
+          <Property Name="Field3" Type="varchar" MaxLength="50" />
+          <Property Name="Field4" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="InstitutionMembers">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="InstitutionId" Type="int" Nullable="false" />
+          <Property Name="Photo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Designation" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="100" />
+          <Property Name="Mobile" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="WebSite" Type="varchar" MaxLength="100" />
+          <Property Name="Field1" Type="varchar" MaxLength="50" />
+          <Property Name="Field2" Type="varchar" MaxLength="50" />
+          <Property Name="Field3" Type="varchar" MaxLength="50" />
+          <Property Name="Field4" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Institutions">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="EparchiesId" Type="int" Nullable="false" />
+          <Property Name="Region" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Photo" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Type" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="100" />
+          <Property Name="Mobile" Type="varchar" MaxLength="100" />
+          <Property Name="Email" Type="varchar" MaxLength="100" />
+          <Property Name="WebSite" Type="varchar" MaxLength="100" />
+          <Property Name="Field1" Type="varchar" MaxLength="50" />
+          <Property Name="Field2" Type="varchar" MaxLength="50" />
+          <Property Name="Field3" Type="varchar" MaxLength="50" />
+          <Property Name="Field4" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="NewsAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+          <Property Name="Photo" Type="varchar" MaxLength="50" />
+          <Property Name="FilePath" Type="varchar" MaxLength="50" />
+          <Property Name="CategoryID" Type="int" Nullable="false" />
+          <Property Name="DisplaySectionID" Type="int" Nullable="false" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsSpecial" Type="bit" />
+          <Property Name="IsMarkDeleted" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="Parish">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Estd" Type="varchar" MaxLength="50" />
+          <Property Name="Patron" Type="varchar" MaxLength="100" />
+          <Property Name="Diocese" Type="varchar" MaxLength="100" />
+          <Property Name="Address" Type="varchar" MaxLength="100" />
+          <Property Name="Phone" Type="varchar" MaxLength="50" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Website" Type="varchar" MaxLength="50" />
+          <Property Name="Fbid" Type="varchar" MaxLength="50" />
+          <Property Name="Vicar" Type="varchar" MaxLength="100" />
+          <Property Name="Asstvicar1" Type="varchar" MaxLength="100" />
+          <Property Name="Asstvicar2" Type="varchar" MaxLength="100" />
+          <Property Name="District" Type="varchar" MaxLength="100" />
+          <Property Name="Field1" Type="varchar" MaxLength="100" />
+          <Property Name="Field2" Type="varchar" MaxLength="100" />
+        </EntityType>
+        <EntityType Name="Priests">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Diocese" Type="varchar" MaxLength="100" />
+          <Property Name="Parish" Type="varchar" MaxLength="100" />
+          <Property Name="LongDesc" Type="nvarchar(max)" />
+          <Property Name="HomeDiocese" Type="varchar" MaxLength="100" />
+          <Property Name="HomeParish" Type="varchar" MaxLength="100" />
+          <Property Name="Seminary" Type="varchar" MaxLength="100" />
+          <Property Name="DOB" Type="varchar" MaxLength="50" />
+          <Property Name="DateOfOrdination" Type="varchar" MaxLength="50" />
+          <Property Name="MaritalStatus" Type="varchar" MaxLength="50" />
+          <Property Name="Education" Type="varchar" MaxLength="50" />
+          <Property Name="PermanentAddress" Type="varchar" MaxLength="100" />
+          <Property Name="PresentAddress" Type="varchar" MaxLength="100" />
+          <Property Name="State" Type="varchar" MaxLength="50" />
+          <Property Name="Country" Type="varchar" MaxLength="50" />
+          <Property Name="Pin" Type="varchar" MaxLength="10" />
+          <Property Name="Phone" Type="varchar" MaxLength="10" />
+          <Property Name="Mobile" Type="varchar" MaxLength="10" />
+          <Property Name="Email" Type="varchar" MaxLength="50" />
+          <Property Name="Website" Type="varchar" MaxLength="50" />
+          <Property Name="Photo" Type="varchar" MaxLength="50" />
+          <Property Name="OtherDetails1" Type="varchar" MaxLength="100" />
+          <Property Name="OtherDetails2" Type="varchar" MaxLength="100" />
+          <Property Name="Field1" Type="varchar" MaxLength="200" />
+          <Property Name="Field2" Type="varchar" MaxLength="200" />
+          <Property Name="Field3" Type="varchar" MaxLength="50" />
+          <Property Name="Field4" Type="varchar" MaxLength="50" />
+          <Property Name="Field5" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Provinces">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Description" Type="nvarchar(max)" />
+        </EntityType>
+        <EntityContainer Name="ContentPlusModelStoreContainer">
+          <EntitySet Name="Articles" EntityType="Self.Articles" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Church" EntityType="Self.Church" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="ChurchMembers" EntityType="Self.ChurchMembers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Curia" EntityType="Self.Curia" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="CuriaMembers" EntityType="Self.CuriaMembers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DailyMessages" EntityType="Self.DailyMessages" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Eparchies" EntityType="Self.Eparchies" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="InstitutionMembers" EntityType="Self.InstitutionMembers" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Institutions" EntityType="Self.Institutions" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="NewsAdmin" EntityType="Self.NewsAdmin" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Parish" EntityType="Self.Parish" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Priests" EntityType="Self.Priests" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Provinces" EntityType="Self.Provinces" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="ContentPlusModel" Alias="Self" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+        <EntityType Name="NewsAdmin">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="FilePath" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CategoryID" Type="Int32" Nullable="false" />
+          <Property Name="DisplaySectionID" Type="Int32" Nullable="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsSpecial" Type="Boolean" />
+          <Property Name="IsMarkDeleted" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedDate" Type="DateTime" Nullable="false" Precision="3" />
+        </EntityType>
+        <EntityContainer Name="ContentPlusEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="NewsAdmins" EntityType="Self.NewsAdmin" />
+          <EntitySet Name="Articles" EntityType="ContentPlusModel.Article" />
+          <EntitySet Name="Priests" EntityType="ContentPlusModel.Priest" />
+          <EntitySet Name="Churches" EntityType="ContentPlusModel.Church" />
+          <EntitySet Name="ChurchMembers" EntityType="ContentPlusModel.ChurchMember" />
+          <EntitySet Name="Curias" EntityType="ContentPlusModel.Curia" />
+          <EntitySet Name="CuriaMembers" EntityType="ContentPlusModel.CuriaMember" />
+          <EntitySet Name="DailyMessages" EntityType="ContentPlusModel.DailyMessage" />
+          <EntitySet Name="Eparchies" EntityType="ContentPlusModel.Eparchy" />
+          <EntitySet Name="InstitutionMembers" EntityType="ContentPlusModel.InstitutionMember" />
+          <EntitySet Name="Institutions" EntityType="ContentPlusModel.Institution" />
+          <EntitySet Name="Provinces" EntityType="ContentPlusModel.Province" />
+          <EntitySet Name="Parishes" EntityType="ContentPlusModel.Parish" />
+        </EntityContainer>
+        <EntityType Name="Article">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Content" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Category1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Category2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Section" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Photo1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Photo2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Photo3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PDF1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PDF2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PDF3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsSpecial" Type="Boolean" />
+          <Property Name="Custom1" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Custom2" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Custom3" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Custom4" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Custom5" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Custom6" Type="String" MaxLength="255" FixedLength="false" Unicode="false" />
+          <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="UpdatedDate" Type="DateTime" Precision="3" />
+        </EntityType>
+        <EntityType Name="Priest">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Diocese" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Parish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="LongDesc" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="HomeDiocese" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="HomeParish" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Seminary" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="DOB" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="DateOfOrdination" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="MaritalStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Education" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="PermanentAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="PresentAddress" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="State" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Country" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Pin" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Photo" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="OtherDetails1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OtherDetails2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Field1" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Field2" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Field3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field5" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Church">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="ChurchMember">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChurchId" Type="Int32" Nullable="false" />
+          <Property Name="PriestId" Type="Int32" Nullable="false" />
+          <Property Name="PositionHeld" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Department" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Curia">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ChurchId" Type="Int32" Nullable="false" />
+          <Property Name="CuriaName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="WebSite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Field1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="CuriaMember">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="CuriaId" Type="Int32" Nullable="false" />
+          <Property Name="PriestId" Type="Int32" Nullable="false" />
+          <Property Name="Department" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Positionheld" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Field2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Field3" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="DailyMessage">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Message" Type="String" Nullable="false" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="Field1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Eparchy">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ProvinceId" Type="Int32" Nullable="false" />
+          <Property Name="EparchiesName" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="WebSite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Field1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="InstitutionMember">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="InstitutionId" Type="Int32" Nullable="false" />
+          <Property Name="Photo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Designation" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="WebSite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Field1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Institution">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="EparchiesId" Type="Int32" Nullable="false" />
+          <Property Name="Region" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Photo" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="Type" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Mobile" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="WebSite" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Field1" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field2" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field3" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Field4" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="Province">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="Parish">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Estd" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Patron" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Diocese" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Address" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Website" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Fbid" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Vicar" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Asstvicar1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Asstvicar2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="District" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Field1" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="Field2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+        </EntityType>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="ContentPlusModelStoreContainer" CdmEntityContainer="ContentPlusEntities">
+          <EntitySetMapping Name="NewsAdmins">
+            <EntityTypeMapping TypeName="ContentPlusModel.NewsAdmin">
+              <MappingFragment StoreEntitySet="NewsAdmin">
+                <ScalarProperty Name="ID" ColumnName="ID" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="FilePath" ColumnName="FilePath" />
+                <ScalarProperty Name="CategoryID" ColumnName="CategoryID" />
+                <ScalarProperty Name="DisplaySectionID" ColumnName="DisplaySectionID" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+                <ScalarProperty Name="IsMarkDeleted" ColumnName="IsMarkDeleted" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Articles">
+            <EntityTypeMapping TypeName="ContentPlusModel.Article">
+              <MappingFragment StoreEntitySet="Articles">
+                <ScalarProperty Name="UpdatedDate" ColumnName="UpdatedDate" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Custom6" ColumnName="Custom6" />
+                <ScalarProperty Name="Custom5" ColumnName="Custom5" />
+                <ScalarProperty Name="Custom4" ColumnName="Custom4" />
+                <ScalarProperty Name="Custom3" ColumnName="Custom3" />
+                <ScalarProperty Name="Custom2" ColumnName="Custom2" />
+                <ScalarProperty Name="Custom1" ColumnName="Custom1" />
+                <ScalarProperty Name="IsSpecial" ColumnName="IsSpecial" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="PDF3" ColumnName="PDF3" />
+                <ScalarProperty Name="PDF2" ColumnName="PDF2" />
+                <ScalarProperty Name="PDF1" ColumnName="PDF1" />
+                <ScalarProperty Name="Photo3" ColumnName="Photo3" />
+                <ScalarProperty Name="Photo2" ColumnName="Photo2" />
+                <ScalarProperty Name="Photo1" ColumnName="Photo1" />
+                <ScalarProperty Name="Section" ColumnName="Section" />
+                <ScalarProperty Name="Category2" ColumnName="Category2" />
+                <ScalarProperty Name="Category1" ColumnName="Category1" />
+                <ScalarProperty Name="Content" ColumnName="Content" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Priests">
+            <EntityTypeMapping TypeName="ContentPlusModel.Priest">
+              <MappingFragment StoreEntitySet="Priests">
+                <ScalarProperty Name="Field5" ColumnName="Field5" />
+                <ScalarProperty Name="Field4" ColumnName="Field4" />
+                <ScalarProperty Name="Field3" ColumnName="Field3" />
+                <ScalarProperty Name="Field2" ColumnName="Field2" />
+                <ScalarProperty Name="Field1" ColumnName="Field1" />
+                <ScalarProperty Name="OtherDetails2" ColumnName="OtherDetails2" />
+                <ScalarProperty Name="OtherDetails1" ColumnName="OtherDetails1" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Pin" ColumnName="Pin" />
+                <ScalarProperty Name="Country" ColumnName="Country" />
+                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="PresentAddress" ColumnName="PresentAddress" />
+                <ScalarProperty Name="PermanentAddress" ColumnName="PermanentAddress" />
+                <ScalarProperty Name="Education" ColumnName="Education" />
+                <ScalarProperty Name="MaritalStatus" ColumnName="MaritalStatus" />
+                <ScalarProperty Name="DateOfOrdination" ColumnName="DateOfOrdination" />
+                <ScalarProperty Name="DOB" ColumnName="DOB" />
+                <ScalarProperty Name="Seminary" ColumnName="Seminary" />
+                <ScalarProperty Name="HomeParish" ColumnName="HomeParish" />
+                <ScalarProperty Name="HomeDiocese" ColumnName="HomeDiocese" />
+                <ScalarProperty Name="LongDesc" ColumnName="LongDesc" />
+                <ScalarProperty Name="Parish" ColumnName="Parish" />
+                <ScalarProperty Name="Diocese" ColumnName="Diocese" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Churches">
+            <EntityTypeMapping TypeName="ContentPlusModel.Church">
+              <MappingFragment StoreEntitySet="Church">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ChurchMembers">
+            <EntityTypeMapping TypeName="ContentPlusModel.ChurchMember">
+              <MappingFragment StoreEntitySet="ChurchMembers">
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="PositionHeld" ColumnName="PositionHeld" />
+                <ScalarProperty Name="PriestId" ColumnName="PriestId" />
+                <ScalarProperty Name="ChurchId" ColumnName="ChurchId" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Curias">
+            <EntityTypeMapping TypeName="ContentPlusModel.Curia">
+              <MappingFragment StoreEntitySet="Curia">
+                <ScalarProperty Name="Field4" ColumnName="Field4" />
+                <ScalarProperty Name="Field3" ColumnName="Field3" />
+                <ScalarProperty Name="Field2" ColumnName="Field2" />
+                <ScalarProperty Name="Field1" ColumnName="Field1" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="CuriaName" ColumnName="CuriaName" />
+                <ScalarProperty Name="ChurchId" ColumnName="ChurchId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="CuriaMembers">
+            <EntityTypeMapping TypeName="ContentPlusModel.CuriaMember">
+              <MappingFragment StoreEntitySet="CuriaMembers">
+                <ScalarProperty Name="Field3" ColumnName="Field3" />
+                <ScalarProperty Name="Field2" ColumnName="Field2" />
+                <ScalarProperty Name="Field1" ColumnName="Field1" />
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Positionheld" ColumnName="Positionheld" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="PriestId" ColumnName="PriestId" />
+                <ScalarProperty Name="CuriaId" ColumnName="CuriaId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DailyMessages">
+            <EntityTypeMapping TypeName="ContentPlusModel.DailyMessage">
+              <MappingFragment StoreEntitySet="DailyMessages">
+                <ScalarProperty Name="Field2" ColumnName="Field2" />
+                <ScalarProperty Name="Field1" ColumnName="Field1" />
+                <ScalarProperty Name="Message" ColumnName="Message" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Eparchies">
+            <EntityTypeMapping TypeName="ContentPlusModel.Eparchy">
+              <MappingFragment StoreEntitySet="Eparchies">
+                <ScalarProperty Name="Field4" ColumnName="Field4" />
+                <ScalarProperty Name="Field3" ColumnName="Field3" />
+                <ScalarProperty Name="Field2" ColumnName="Field2" />
+                <ScalarProperty Name="Field1" ColumnName="Field1" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="EparchiesName" ColumnName="EparchiesName" />
+                <ScalarProperty Name="ProvinceId" ColumnName="ProvinceId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="InstitutionMembers">
+            <EntityTypeMapping TypeName="ContentPlusModel.InstitutionMember">
+              <MappingFragment StoreEntitySet="InstitutionMembers">
+                <ScalarProperty Name="Field4" ColumnName="Field4" />
+                <ScalarProperty Name="Field3" ColumnName="Field3" />
+                <ScalarProperty Name="Field2" ColumnName="Field2" />
+                <ScalarProperty Name="Field1" ColumnName="Field1" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Designation" ColumnName="Designation" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="InstitutionId" ColumnName="InstitutionId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Institutions">
+            <EntityTypeMapping TypeName="ContentPlusModel.Institution">
+              <MappingFragment StoreEntitySet="Institutions">
+                <ScalarProperty Name="Field4" ColumnName="Field4" />
+                <ScalarProperty Name="Field3" ColumnName="Field3" />
+                <ScalarProperty Name="Field2" ColumnName="Field2" />
+                <ScalarProperty Name="Field1" ColumnName="Field1" />
+                <ScalarProperty Name="WebSite" ColumnName="WebSite" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Type" ColumnName="Type" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Photo" ColumnName="Photo" />
+                <ScalarProperty Name="Region" ColumnName="Region" />
+                <ScalarProperty Name="EparchiesId" ColumnName="EparchiesId" />
+                <ScalarProperty Name="Id" ColumnName="Id" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Provinces">
+            <EntityTypeMapping TypeName="ContentPlusModel.Province">
+              <MappingFragment StoreEntitySet="Provinces">
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Parishes">
+            <EntityTypeMapping TypeName="ContentPlusModel.Parish">
+              <MappingFragment StoreEntitySet="Parish">
+                <ScalarProperty Name="Field2" ColumnName="Field2" />
+                <ScalarProperty Name="Field1" ColumnName="Field1" />
+                <ScalarProperty Name="District" ColumnName="District" />
+                <ScalarProperty Name="Asstvicar2" ColumnName="Asstvicar2" />
+                <ScalarProperty Name="Asstvicar1" ColumnName="Asstvicar1" />
+                <ScalarProperty Name="Vicar" ColumnName="Vicar" />
+                <ScalarProperty Name="Fbid" ColumnName="Fbid" />
+                <ScalarProperty Name="Website" ColumnName="Website" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Diocese" ColumnName="Diocese" />
+                <ScalarProperty Name="Patron" ColumnName="Patron" />
+                <ScalarProperty Name="Estd" ColumnName="Estd" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2008/10/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="true" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

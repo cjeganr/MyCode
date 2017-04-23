@@ -1,0 +1,25 @@
+﻿@model IEnumerable<ContentPlus.Models.Priest>
+@{
+    ViewBag.Title = "LatePrelates";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+
+@foreach (var item in Model)
+{
+    <div style="padding-bottom:20px; border-bottom:dashed 1px #CCC; margin-bottom:30px;">
+        <div class="row">
+            <div class="col-xs-4 col-xxs">
+                <img src="@Url.Content(item.Photo)" height="360" class="img-responsive img-thumbnail">
+            </div>
+            <div class="col-xs-8 col-xxs">
+                <h3 class="h4">@Html.DisplayFor(modelItem => item.Name)</h3>
+                <h6 class="SubTitle">@Html.DisplayFor(modelItem => item.Field1)</h6>
+                <p><strong>Eparchy :</strong> @Html.DisplayFor(modelItem => item.Diocese)</p>
+                <p><strong>Parish :</strong> @Html.DisplayFor(modelItem => item.Parish)</p>
+                <p><strong>Date Of Birth :</strong> @Html.DisplayFor(modelItem => item.DOB)</p>
+                @Html.ActionLink("More Details", "PriestDetails", new { id = item.ID }, new { @class = "btn btn-sm btn-primary" })
+                @*<a class="btn btn-sm btn-primary" href="#">More Details</a>*@
+            </div>
+        </div>
+    </div>
+}

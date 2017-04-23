@@ -1,0 +1,71 @@
+﻿@model IEnumerable<ContentPlus.Models.Parish>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+
+
+<div class="row">
+    <div class="col-md-8 col-xs-8 col-xxs">
+        <h1 class="h1">Parish Directory</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 col-xs-8 col-xxs">
+        <h4 class="h4">Parish Search</h4>
+    </div>
+</div>
+
+@using (Html.BeginForm("Index", "ParishSearch", FormMethod.Get))
+{
+    <div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="box-body">
+                    <div class="form-group">
+                        <input type="text" name="name" placeholder="Search by Parish Name..." class="form-control" required>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <input type="submit" value="Search" id="btnSubmit" class="btn btn-primary" />
+    </div>
+}
+
+<br />
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div style="padding-bottom:20px; border-bottom:dashed 1px #CCC; margin-bottom:30px;">
+            <div class="row">
+               
+                <div class="col-xs-8 col-xxs">
+                    <h3 class="h4">@Html.DisplayFor(modelItem => item.Name)</h3>
+                    <p><strong>Estd :</strong> @Html.DisplayFor(modelItem => item.Estd)</p>
+                    <p><strong>Patron :</strong> @Html.DisplayFor(modelItem => item.Patron)</p>
+                    <p><strong>Diocese :</strong> @Html.DisplayFor(modelItem => item.Diocese)</p>
+                    <p><strong>District :</strong> @Html.DisplayFor(modelItem => item.District)</p>
+                    <p><strong>Address :</strong> @Html.DisplayFor(modelItem => item.Address)</p>
+                    <p><strong>Phone :</strong> @Html.DisplayFor(modelItem => item.Phone)</p>
+                    <p><strong>Email :</strong> @Html.DisplayFor(modelItem => item.Email)</p>
+
+                    <p><strong>Website :</strong> @Html.DisplayFor(modelItem => item.Website)</p>
+                    <p><strong>Fbid :</strong> @Html.DisplayFor(modelItem => item.Fbid)</p>
+                    <p><strong>Vicar :</strong> @Html.DisplayFor(modelItem => item.Vicar)</p>
+                    <p><strong>Asstvicar1 :</strong> @Html.DisplayFor(modelItem => item.Asstvicar1)</p>
+                    <p><strong>Asstvicar2 :</strong> @Html.DisplayFor(modelItem => item.Asstvicar2)</p>
+
+                    @Html.ActionLink("Details", "Details", new { id = item.ID }, new { @class = "btn btn-sm btn-primary" })
+                    @*<a class="btn btn-sm btn-primary" href="#">More Details</a>*@
+                </div>
+            </div>
+        </div>
+    }
+
+
+}
+
+
+

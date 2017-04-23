@@ -1,0 +1,14 @@
+﻿@model ContentPlus.Models.Eparchy
+
+@{
+    ViewBag.Title = "PathanamthittaEparchy";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+
+<h2>
+    @Html.DisplayFor(model => model.EparchiesName)
+</h2>
+<br />
+<div>
+    @Html.Raw(HttpUtility.HtmlDecode(Model.Description))
+</div>

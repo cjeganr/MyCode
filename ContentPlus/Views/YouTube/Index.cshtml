@@ -1,0 +1,106 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_LayoutInner.cshtml";
+}
+
+<div class="gallery clearfix">
+    <h4>Video</h4>
+    <div class="">
+        <div style="width:200px;height:150px;">
+            @*<iframe class="embed-responsive-item" src="http://www.youtube.com/embed/zpOULjyy-n8?rel=0" allowfullscreen></iframe>*@
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wFZdAmI9ALk" allowfullscreen></iframe>
+        </div>
+        <div style="width:200px;height:150px;">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hbYMcZxmn-c" allowfullscreen></iframe>
+        </div>
+        <div style="width:200px;height:150px;">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/AynOGHyC-mo" allowfullscreen></iframe>
+        </div>
+        <div style="width:200px;height:150px;">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/tZfNkbwmk2s" allowfullscreen></iframe>
+        </div>
+        <div style="width:200px;height:150px;">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/0h0Cbcgo3Gc" allowfullscreen></iframe>
+        </div>
+        <div style="width:200px;height:150px;">
+            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/wJ7rWR5_Q4c" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+<!--
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 col-xs-8 col-xxs">
+            <h1 class="h1">Video Gallery</h1>
+            <p>Text Content</p>
+            <div class="row">
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/embed/wFZdAmI9ALk" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="https://www.youtube.com/embed/wFZdAmI9ALk"><span class="play"></span></a></div>
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/watch?v=Bjl_7UStVX8" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="http://i2.ytimg.com/vi/Bjl_7UStVX8/0.jpg"><span class="play"></span></a></div>
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/watch?v=Bjl_7UStVX8" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="http://i2.ytimg.com/vi/Bjl_7UStVX8/0.jpg"><span class="play"></span></a></div>
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/watch?v=Bjl_7UStVX8" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="http://i2.ytimg.com/vi/Bjl_7UStVX8/0.jpg"><span class="play"></span></a></div>
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/watch?v=Bjl_7UStVX8" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="http://i2.ytimg.com/vi/Bjl_7UStVX8/0.jpg"><span class="play"></span></a></div>
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/watch?v=Bjl_7UStVX8" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="http://i2.ytimg.com/vi/Bjl_7UStVX8/0.jpg"><span class="play"></span></a></div>
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/watch?v=Bjl_7UStVX8" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="http://i2.ytimg.com/vi/Bjl_7UStVX8/0.jpg"><span class="play"></span></a></div>
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/watch?v=Bjl_7UStVX8" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="http://i2.ytimg.com/vi/Bjl_7UStVX8/0.jpg"><span class="play"></span></a></div>
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/watch?v=Bjl_7UStVX8" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="http://i2.ytimg.com/vi/Bjl_7UStVX8/0.jpg"><span class="play"></span></a></div>
+                <div class="col-xs-4 col-xxs"><a class="thumbnail fancybox-media" href="https://www.youtube.com/watch?v=Bjl_7UStVX8" rel="media-gallery"><img width="480" height="360" class="img-responsive" alt="Test Video" src="http://i2.ytimg.com/vi/Bjl_7UStVX8/0.jpg"><span class="play"></span></a></div>
+            </div>
+        </div>
+</div>
+</div>
+<script type='text/javascript' src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+<script type='text/javascript' src='js/jquery-migrate.min.js'></script>
+<script src="js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="js/flexy-menu.js"></script>
+<script type="text/javascript">$(document).ready(function () { $(".flexy-menu").flexymenu({ speed: 400, indicator: true }); });</script>
+@*<script language=Javascript>
+<!--
+function isNumberKey(evt)
+{
+var charCode = (evt.which) ? evt.which : event.keyCode
+if (charCode > 31 && (charCode < 48 || charCode > 57))
+return false;
+
+return true;
+}
+//-->
+</script>*@
+<script type="text/javascript" src="~/Content/Website/fbox/jquery.fancybox.js?v=2.1.5"></script>
+<script type="text/javascript" src="~/Content/Website/fbox/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
+<link rel="stylesheet" type="text/css" href="~/Content/Website/fbox/jquery.fancybox.css?v=2.1.5" media="screen" />
+<script type="text/javascript">
+    $(document).ready(function () {
+        $(".fancybox").fancybox({
+            wrapCSS: 'fancybox-custom',
+            closeClick: true,
+            openEffect: 'elastic',
+            closeEffect: 'elastic',
+            helpers: {
+                title: {
+                    type: 'inside'
+                },
+                overlay: {
+                    css: {
+                        'background': 'rgba(238,238,238,0.85)'
+                    }
+                }
+            }
+        });
+
+        $('.fancybox-media')
+        .attr('rel', 'media-gallery')
+        .fancybox({
+            openEffect: 'none',
+            closeEffect: 'none',
+            prevEffect: 'none',
+            nextEffect: 'none',
+
+            arrows: false,
+            helpers: {
+                media: {},
+                buttons: {}
+            }
+        });
+    });
+</script>-->

@@ -1,0 +1,153 @@
+﻿@model ContentPlus.Models.Parish
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <section class="content-header">
+        <h1>
+            Parish
+            <small>Parish Member</small>
+        </h1>
+        <ol class="breadcrumb">
+            <li><a href="#"><i class="fa fa-dashboard"></i> Home</a></li>
+            <li><a href="#">Parish</a></li>
+            <li class="active">Parish Member Details</li>
+        </ol>
+    </section>
+    <!-- Main content -->
+    <section class="content">
+        <div class="row">
+            <!-- left column -->
+            <div class="col-md-12">
+                <!-- general form elements -->
+                <div class="box box-primary">
+                    <div class="box-header">
+                        <h3 class="box-title">Parish Member Details</h3>
+                    </div><!-- /.box-header -->
+                    <!-- form start -->
+                    <!--<form role="form">-->
+                    <div class="box-body">
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Name)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Name)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Estd)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Estd)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Patron)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Patron)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Diocese)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Diocese)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Address)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Address)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Phone)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Phone)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Email)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Email)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Website)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Website)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Fbid)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Fbid)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Vicar)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Vicar)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Asstvicar1)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Asstvicar1)
+                        </div>
+
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Asstvicar2)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Asstvicar2)
+                        </div>
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.District)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.District)
+                        </div>
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Field1)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Field1)
+                        </div>
+                        <div class="display-label">
+                            @Html.DisplayNameFor(model => model.Field2)
+                        </div>
+                        <div class="display-field">
+                            @Html.DisplayFor(model => model.Field2)
+                        </div>
+
+                        <div class="box-header">
+                            <h3 class="box-title">Are you sure you want to delete this?</h3>
+                        </div><!-- /.box-header -->
+                        <p>
+                            <input type="submit" value="Delete" class="btn btn-primary" />
+                            @Html.ActionLink("Back to List", "Index", null, new { @class = "btn btn-primary" })
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><!-- /.content -->
+}
+<!-- jQuery 2.1.3 -->
+<script src="~/styles/plugins/jQuery/jQuery-2.1.3.min.js"></script>
