@@ -1650,6 +1650,7 @@
     <Content Include="Views\Publisher\SixteenOrdinarySynod.cshtml" />
     <Content Include="Views\Publisher\SeventeenOrdinarySynod.cshtml" />
     <Content Include="Views\Publisher\EighteenOrdinarySynod.cshtml" />
+    <Content Include="Views\Publisher\AustraliaSingapore.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

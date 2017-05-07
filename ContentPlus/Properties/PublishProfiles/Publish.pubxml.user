@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/28/2015 18:01:04</publishTime>
     </File>
     <File Include="bin/ContentPlus.dll">
-      <publishTime>04/24/2017 03:11:01</publishTime>
+      <publishTime>05/08/2017 01:22:52</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
       <publishTime>02/28/2015 18:00:57</publishTime>
@@ -3640,7 +3640,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/22/2015 21:22:45</publishTime>
     </File>
     <File Include="Views/Eparchy/Index.cshtml">
-      <publishTime>11/26/2015 20:42:39</publishTime>
+      <publishTime>05/08/2017 01:05:06</publishTime>
     </File>
     <File Include="Views/Home/About.cshtml">
       <publishTime>02/28/2015 18:00:19</publishTime>
@@ -3757,7 +3757,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>06/21/2015 21:12:26</publishTime>
     </File>
     <File Include="Views/Province/Index.cshtml">
-      <publishTime>06/21/2015 19:35:39</publishTime>
+      <publishTime>05/08/2017 01:17:56</publishTime>
     </File>
     <File Include="Views/Publisher/Aikyadeepam.cshtml">
       <publishTime>01/16/2016 12:02:42</publishTime>
@@ -3770,6 +3770,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Publisher/AMU.cshtml">
       <publishTime>03/20/2016 13:15:08</publishTime>
+    </File>
+    <File Include="Views/Publisher/AustraliaSingapore.cshtml">
+      <publishTime>05/08/2017 00:20:48</publishTime>
     </File>
     <File Include="Views/Publisher/BatheryEparchy.cshtml">
       <publishTime>07/26/2015 22:02:39</publishTime>
@@ -4240,7 +4243,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>04/24/2016 16:34:36</publishTime>
     </File>
     <File Include="Views/Shared/_LayoutInner.cshtml">
-      <publishTime>04/23/2017 06:06:45</publishTime>
+      <publishTime>05/08/2017 00:53:51</publishTime>
     </File>
     <File Include="Views/Shared/_LoginPartial.cshtml">
       <publishTime>02/28/2015 18:00:19</publishTime>
@@ -4264,7 +4267,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/28/2015 18:00:19</publishTime>
     </File>
     <File Include="Web.config">
-      <publishTime>06/07/2015 19:55:50</publishTime>
+      <publishTime>05/08/2017 01:23:06</publishTime>
     </File>
     <File Include="Web_PROD.config">
       <publishTime>06/03/2015 12:35:11</publishTime>

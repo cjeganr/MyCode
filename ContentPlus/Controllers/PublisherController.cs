@@ -467,7 +467,12 @@ namespace ContentPlus.Controllers
         {
             List<Eparchy> eparchy = db.Eparchies.Where(x => x.Field4 == "ETRIndiaEparchy").ToList();
             return View(eparchy[0]);
-        }  
+        }
+        public ActionResult AustraliaSingapore()
+        {
+            List<Eparchy> eparchy = db.Eparchies.Where(x => x.Field4 == "AustraliaSingapore").ToList();
+            return View(eparchy[0]);
+        } 
         public ActionResult PermanentSynodMembers()
         {
             List<CuriaPriest> curiaMembers = new List<CuriaPriest>();
