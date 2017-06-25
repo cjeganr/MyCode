@@ -1332,5 +1332,24 @@ namespace ContentPlus.Controllers
             }
             return View();
         }
+        public ActionResult Viswasabhodhini()
+        {
+            List<Article> home = db.Articles.Where(x => x.Title == "Viswasabhodhini").ToList();
+            if (home.Count > 0)
+            {
+                ViewBag.Content = home[0].Content;
+            }
+            return View();
+        }
+        public ActionResult MalankaraNadham()
+        {
+            List<Article> home = db.Articles.Where(x => x.Title == "MalankaraNadham").ToList();
+            if (home.Count > 0)
+            {
+                ViewBag.Content = home[0].Content;
+            }
+            return View();
+        }
+        
     }
 }

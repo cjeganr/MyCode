@@ -16,7 +16,7 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>02/28/2015 18:01:04</publishTime>
     </File>
     <File Include="bin/ContentPlus.dll">
-      <publishTime>05/08/2017 01:22:52</publishTime>
+      <publishTime>06/26/2017 03:32:34</publishTime>
     </File>
     <File Include="bin/de/Microsoft.Data.Edm.resources.dll">
       <publishTime>02/28/2015 18:00:57</publishTime>
@@ -3859,10 +3859,13 @@ by editing this MSBuild file. In order to learn more about this please visit htt
       <publishTime>11/26/2015 21:31:01</publishTime>
     </File>
     <File Include="Views/Publisher/ExarchateInUSA.cshtml">
-      <publishTime>07/26/2015 22:07:07</publishTime>
+      <publishTime>06/26/2017 03:05:06</publishTime>
     </File>
     <File Include="Views/Publisher/ExarchateofKhadkiPune.cshtml">
-      <publishTime>06/05/2016 18:29:54</publishTime>
+      <publishTime>06/26/2017 03:05:50</publishTime>
+    </File>
+    <File Include="Views/Publisher/Exodus.cshtml">
+      <publishTime>06/26/2017 01:39:01</publishTime>
     </File>
     <File Include="Views/Publisher/ExtraOrdinarySynod.cshtml">
       <publishTime>11/21/2015 17:05:38</publishTime>
@@ -3900,11 +3903,14 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     <File Include="Views/Publisher/GirideepamTLA.cshtml">
       <publishTime>01/27/2016 21:07:49</publishTime>
     </File>
+    <File Include="Views/Publisher/Girinadam.cshtml">
+      <publishTime>06/26/2017 01:40:05</publishTime>
+    </File>
     <File Include="Views/Publisher/GSS.cshtml">
       <publishTime>01/16/2016 12:01:18</publishTime>
     </File>
     <File Include="Views/Publisher/GurgaonDelhi.cshtml">
-      <publishTime>06/05/2016 17:47:49</publishTime>
+      <publishTime>06/26/2017 03:04:33</publishTime>
     </File>
     <File Include="Views/Publisher/Hirerachy.cshtml">
       <publishTime>11/17/2016 09:10:45</publishTime>
@@ -3965,6 +3971,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Publisher/MalankaraBulletin.cshtml">
       <publishTime>06/22/2016 20:46:30</publishTime>
+    </File>
+    <File Include="Views/Publisher/MalankaraNadham.cshtml">
+      <publishTime>06/26/2017 03:20:57</publishTime>
     </File>
     <File Include="Views/Publisher/MalankaraVilakku.cshtml">
       <publishTime>01/27/2016 21:07:25</publishTime>
@@ -4079,6 +4088,9 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Publisher/SH.cshtml">
       <publishTime>01/16/2016 11:59:51</publishTime>
+    </File>
+    <File Include="Views/Publisher/ShanthiVani.cshtml">
+      <publishTime>06/26/2017 01:39:19</publishTime>
     </File>
     <File Include="Views/Publisher/SIC.cshtml">
       <publishTime>01/16/2016 11:59:17</publishTime>
@@ -4223,6 +4235,12 @@ by editing this MSBuild file. In order to learn more about this please visit htt
     </File>
     <File Include="Views/Publisher/USAAndCanada.cshtml">
       <publishTime>06/05/2016 18:29:26</publishTime>
+    </File>
+    <File Include="Views/Publisher/Vimalanadam.cshtml">
+      <publishTime>06/26/2017 01:39:41</publishTime>
+    </File>
+    <File Include="Views/Publisher/Viswasabhodhini.cshtml">
+      <publishTime>06/26/2017 01:33:27</publishTime>
     </File>
     <File Include="Views/Shared/EditorTemplates/tinymce_jquery_full.cshtml">
       <publishTime>02/28/2015 19:06:41</publishTime>

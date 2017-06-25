@@ -1651,6 +1651,12 @@
     <Content Include="Views\Publisher\SeventeenOrdinarySynod.cshtml" />
     <Content Include="Views\Publisher\EighteenOrdinarySynod.cshtml" />
     <Content Include="Views\Publisher\AustraliaSingapore.cshtml" />
+    <Content Include="Views\Publisher\Viswasabhodhini.cshtml" />
+    <Content Include="Views\Publisher\Exodus.cshtml" />
+    <Content Include="Views\Publisher\ShanthiVani.cshtml" />
+    <Content Include="Views\Publisher\Vimalanadam.cshtml" />
+    <Content Include="Views\Publisher\Girinadam.cshtml" />
+    <Content Include="Views\Publisher\MalankaraNadham.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

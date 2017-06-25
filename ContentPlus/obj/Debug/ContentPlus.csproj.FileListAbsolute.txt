@@ -176,3 +176,4 @@ C:\Users\jegan\Source\Repos\MyCode\ContentPlus\bin\zh-Hans\System.Spatial.resour
 C:\Users\jegan\Source\Repos\MyCode\ContentPlus\bin\zh-Hant\System.Spatial.resources.dll
 C:\Users\jegan\Source\Repos\MyCode\ContentPlus\obj\Debug\ContentPlus.dll
 C:\Users\jegan\Source\Repos\MyCode\ContentPlus\obj\Debug\ContentPlus.pdb
+C:\Users\jegan\Source\Repos\MyCode\ContentPlus\obj\Debug\ContentPlus.csprojResolveAssemblyReference.cache
